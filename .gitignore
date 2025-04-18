@@ -1,0 +1,26 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Node.js / frontend dev (если решишь добавить сборщик)
+node_modules/
+dist/
+build/
+
+# PHPStorm/WebStorm/VSCode config
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Cache
+.cache/
+*.tmp
+*.bak
+
+# Environment config
+.env
+
+# Composer (если добавишь в будущем)
+vendor/
