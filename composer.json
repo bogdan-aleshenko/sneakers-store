@@ -3,3 +3,9 @@
     "squizlabs/php_codesniffer": "^3.6"
   }
 }
+
+"scripts": {
+"post-install-cmd": [
+"php vendor/bin/openapi --output docs/api/swagger.json src/"
+]
+}

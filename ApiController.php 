@@ -1,0 +1,15 @@
+/**
+ * REST-контролер для керування замовленнями.
+ * Реалізує REST API для клієнтів.
+ */
+class ApiController {
+
+    /**
+     * Повертає список доступних товарів.
+     *
+     * @return Product[] список обʼєктів Product
+     */
+    public function getAvailableProducts() {
+        // Код
+    }
+}

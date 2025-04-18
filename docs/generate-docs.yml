@@ -1,0 +1,22 @@
+name: Generate PHPDoc
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+      - name: Install dependencies
+        run: |
+          composer install --dev
+      - name: Generate PHPDoc
+        run: |
+          vendor/bin/phpdoc --directory src --target docs/api
