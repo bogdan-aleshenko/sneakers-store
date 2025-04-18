@@ -1,0 +1,41 @@
+._anim-items {
+  opacity: 0;
+  transition: all 1s;
+}
+._anim-items.scale {
+  transform: scale(0);
+}
+._anim-items.top {
+  transform: translate(0px, -200%);
+}
+._anim-items.bottom {
+  transform: translate(0px, 200%);
+}
+._anim-items.left {
+  transform: translate(-100%, 0%);
+}
+._anim-items.right {
+  transform: translate(100%, 0%);
+}
+._anim-items._active {
+  transform: translate(0px, 0%);
+  transform: scale(1);
+  opacity: 1;
+}
+.main__social {
+  &._active {
+    transform: translate(0px, -50%);
+  }
+}
+._anim-wobat {
+  &::after {
+    bottom: 50%;
+    font-size: 8vw;
+    transition-duration: 2s;
+    transition-property: all;
+  }
+  &._active::after {
+    bottom: 70px;
+    font-size: 3vw;
+  }
+}

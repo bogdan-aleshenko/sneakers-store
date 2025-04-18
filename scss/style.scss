@@ -1,0 +1,21 @@
+@import "resetStyle";
+@import "animation";
+@import "header";
+@import "main";
+@import "footer";
+@import "popup";
+@import "variable";
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.wrapper {
+  transition: all 1s;
+  background-color: $bgc;
+}
+.container {
+  max-width: 1820px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  position: relative;
+}
