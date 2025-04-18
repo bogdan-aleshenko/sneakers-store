@@ -1,0 +1,12 @@
+User-agent: *
+Disallow:
+Sitemap: https://yunnas300.github.io/sneakers-store/sitemap.xml
+
+<!-- sitemap.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yunnas300.github.io/sneakers-store/</loc>
+  </url>
+</urlset>
+
