@@ -1,5 +1,10 @@
 <?php
   $data = json_decode(file_get_contents('php://input'), true);
+  class OrderException extends Exception {}
+
+  $log->info("Оформлення замовлення", ['user_id' => $userId, 'cart' => $cart]);
+
+  try {
 
   if(isset($data['idUser']) && isset($data['idGoods'])){
     $id_user = $data['idUser'];
@@ -20,5 +25,7 @@
  
   } else {
     echo json_encode(array('success' => false, 'message' => 'Помилка: Дані не були передані коректно.'));
-  }
-
+  }} catch (Exception $e) {
+      $log->error("Помилка під час створення замовлення: " . $e->getMessage());
+      throw new Exception("Помилка: не вдалося створити замовлення.");
+   }

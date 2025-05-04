@@ -4,6 +4,11 @@
   }
 }
 
+"require": {
+"monolog/monolog": "^3.0"
+}
+
+
 "scripts": {
 "post-install-cmd": [
 "php vendor/bin/openapi --output docs/api/swagger.json src/"
