@@ -12,6 +12,9 @@
 
     while($row = $result->fetch_assoc()){
       array_push($data, $row);
+      INSERT INTO orders (user_id, product_id, size, quantity)
+      VALUES (?, ?, ?, ?)
+      ON DUPLICATE KEY UPDATE quantity = quantity + VALUES(quantity);
     }
 
     $mysql->close();
@@ -20,5 +23,6 @@
 
     echo json_encode($data);
   }else {
+    Log::channel('performance')->info('Пошук товарів', ['filters' => $filters]);
     echo json_encode(array('success' => false, 'message' => 'Помилка: Дані не були передані коректно.'));
   }
